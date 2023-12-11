@@ -1,0 +1,105 @@
+Progm-1
+
+git init
+git remote rm origin
+git remote add origin https://github.com/abc/demo.git
+
+git config --global user.name " "
+git config --global user.email " "
+
+cd 
+cd desktop
+cd demo
+
+git add .
+git commit -m "first commit"
+git push origin master
+
+git status
+git log
+
+git clone repo-link
+git reset
+
+-------------------------
+
+Progm-2
+
+git init
+git remote rm origin
+git remote add origin https://github.com/abc/demo.git
+
+git config --global user.name " "
+git config --global user.email " "
+
+cd 
+cd desktop
+cd demo
+
+git checkout -b branch1
+nano file1.txt
+git add .
+git commit -m "b1"
+
+git switch master
+
+git checkout -b branch2
+nano file1.txt
+git add .
+git commit -m "b2"
+
+git switch master
+
+git merge branch1
+git merge branch2
+
+git diff branch1
+git diff branch2
+
+git push origin branch1
+git push origin branch2
+
+
+-----------------------------
+
+Prog-3
+
+1) Download and install JDK
+2) Set "Environment variable"
+	- Go to Environment variable, under "System variable" select PATH
+	  and add path of jdk "C:\Program Files\Java\jdk-17"
+3) Download and install Jenkins
+4) Run Jenkins on "localhost8080"
+5) Create a folder on desktop which contains python file "first.py"
+6) upload the file to github repository
+7) Launch the Jenkins and configure the pipeline
+	- click +new item and give a name to it
+	- click "Freestyle project"
+8) Under "Source Code Management" give git-repo link
+9) Under "Build Trigger", select "Poll SCM" and put 5-star with space
+10) ??? In "Build Steps" choose "Execute Windows batch command" and add python prgm1.py  ???
+11) Apply and save
+12) Click on "Build Now" and click on "Consol Output" and verify
+
+
+---------------------------------
+
+Progm-4
+
+1) Download and install JDK
+2) Set "Environment variable"
+	- Go to Environment variable, under "System variable" select PATH
+	  and add path of jdk "C:\Program Files\Java\jdk-17"
+3) Create a folder "Docker" in desktop 
+4) Open VS code and run any java program
+5) Now create a new file in VS code and save it as "Dockerfile". It should contain
+	FROM openjdk
+	WORKDIR /app
+	COPY . /app
+	RUN javac P1.java
+	CMD ["java", "P1"]
+5) Go to docker app, on bottom left run Docker
+6) Run java file in VS code and in its terminal type
+	docker build -t app .
+	docker run --name app1 app
+7) Open docker check for output
